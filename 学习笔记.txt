@@ -2,9 +2,68 @@
 
 
 
+----------------------------------
+linux 命令：
+	
 
 
+----------------------------------
+linux 命令：
 
+打包 与 压缩
+
+	打包：将多个文件合并到一个文件中
+	压缩：将打包后的文件进行压缩
+	
+		.tar
+		解包：tar xvf FileName.tar
+		打包：tar cvf FileName.tar DirName
+		（注：tar是打包，不是压缩！）
+
+		.gz
+		解压1：gunzip FileName.gz
+		解压2：gzip -d FileName.gz
+		压缩：gzip FileName
+
+		.tar.gz 和 .tgz
+		解压：tar zxvf FileName.tar.gz
+		压缩：tar zcvf FileName.tar.gz DirName
+
+	
+----------------------------------
+linux 命令：
+
+	文件权限：
+		chmod 777 文件名  （4 2 1）
+		
+	所有者：（注意，要进入当前文件拥有者的账户才能修改权限！）
+		修改用户组：
+			chgrp 组名 文件名
+		修改所有者：
+			chown 用户 文件名
+
+
+----------------------------------
+linux 命令：
+
+软件的安装和卸载：
+
+	1.RPM 
+		安装：
+		　　	# rpm -ivh
+		卸载:
+				rpm -qa | grep 包名
+				这个命令是为了把包名相关的包都列出来     
+				rpm -e 文件名
+				这个命令就是你想卸载的软件，后面是包名称，最后的版本号是不用打的
+		查看安装路劲：
+				rpm -l 安装包名
+
+	2.yum
+		安装：
+			# yum install 包名
+		卸载：
+			# yum -y remove 包名
 
 
 ----------------------------------
